@@ -1,9 +1,9 @@
-import { Messaging } from './ocp/services/messaging';
-import { Order } from './ocp/classes/order';
-import { Persistance } from './ocp/services/persistance';
-import { Product } from './ocp/classes/Product';
-import { ShoppingCart } from './ocp/classes/shopping-cart';
-import { FiftyPercenteDiscount } from './ocp/classes/discount';
+import { Messaging } from './lsp/services/messaging';
+import { Order } from './lsp/classes/order';
+import { Persistance } from './lsp/services/persistance';
+import { Product } from './lsp/classes/Product';
+import { ShoppingCart } from './lsp/classes/shopping-cart';
+import { FiftyPercenteDiscount } from './lsp/classes/discount';
 
 const fiftyPercenteDiscount = new FiftyPercenteDiscount();
 const shoppingCart = new ShoppingCart(fiftyPercenteDiscount);
