@@ -1,12 +1,12 @@
 export abstract class Discount {
-  abstract calculate(price: number): number;
+  protected discount = 0;
+  alculate(price: number): number {
+    return price - (price * this.discount) / 100;
+  }
 }
 
 export class FiftyPercenteDiscount extends Discount {
-  private readonly discount = 50;
-  calculate(price: number): number {
-    return price - (price * this.discount) / 100;
-  }
+  protected discount = 50;
 }
 
 export class noDiscount extends Discount {
