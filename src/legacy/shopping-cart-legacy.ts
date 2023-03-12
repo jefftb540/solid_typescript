@@ -1,6 +1,7 @@
 type CartItem = { name: string; price: number };
 type OrderStatus = 'open' | 'closed';
-export class ShoppingCart {
+
+export class ShoppingCartLegacy {
   private readonly _items: CartItem[] = [];
   private _orderStatus: OrderStatus = 'open';
 
@@ -53,13 +54,3 @@ export class ShoppingCart {
     this._items.length = 0;
   }
 }
-
-const shoppingCart = new ShoppingCart();
-
-shoppingCart.addItem({ name: 'vamisa do vasco I', price: 269.0 });
-shoppingCart.addItem({ name: 'vamisa do vasco II', price: 269.0 });
-shoppingCart.addItem({ name: 'vamisa do vasco II', price: 269.0 });
-
-console.log(shoppingCart.itens);
-shoppingCart.checkout();
-console.log(shoppingCart.orderStatus);
